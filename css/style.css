@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+    background: #eee;
+    height: auto;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 1.2rem; /*rem default value is 16px*/
+  text-transform: capitalize;
+  margin: 0;
+
+}
+
+img {
+  display: block;
+  width: 100%;  /* Make images 100% width of container element */
+}
+
+main {
+  max-width: 900px;
+  margin: auto;  /*Makes it go to the middle */
+  /*Shadow of boxes - images  */
+  box-shadow: 30px 0px 40px rgba(0, 0, 0, 0.1),
+              -30px 0px 40px rgba(0,0,0,0.1);
+}
+
+#landing {
+  background: # #e6e6e6;
+  }
+#landing-text {
+  display: flex;
+  flex: 0 1 40vw; /* viewport widths*/
+  height: 50vh; /*viewport heights*/
+  justify-content: center;  /* with flexbox: align it to ...*/
+  align-items: center;  /*middle of screen horizontaly and (this line) vertically */
+  text-align: center;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+#landng-text h2 {
+  color: #888;
+}
+
+#landing-image { /*COOL STUFF*/
+  /* from unsplash.com*/
+  background: url('https://source.unsplash.com/dC6Pb2JdAqs');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50vh;
+  flex: 0 1 60vw;
+  margin: 0;
+}
+
+#myImg {
+  border-radius: 50%;
+  border: 0.5px solid #ff531a;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.7), -2px -2px 10px rgba(0,0,0,0.7);
+  width: 80%;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  padding: 0.5rem 2rem;
+  border: 1px #ccc solid;
+  display: inline-block;
+  margin: 2rem 0 0;
+  border-radius: 50px;
+  text-decoration: none;
+  color: #333;
+  /* slow transition on hover, SO COOL PROPERTY BRO*/
+  transition: background 500ms ease;
+}
+.btn:hover {
+  background: #f4f4f4;
+}
+
+#header {
+  padding: 1.5rem;
+  text-align: center;
+  background: #333;
+  color: #fff;
+}
+#header h2 {
+  border-left: dotted 1px #fff;
+  border-right: dotted 1px #fff;
+  display: inline-block;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.caption {
+  padding: 0.8rem;
+  text-align: center;
+
+}
+
+/*About me */
+#aboutMe {
+  background: #ffd9cc;
+}
+
+
+/*skills*/
+#skills {
+  background: #e6f2ff;
+}
+
+#skills ul {
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+  list-style: none;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+#skills #learningSkills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/*PROJECTS*/
+#projects {
+  background: #e6fff2;
+}
+#projects h3 {
+  text-align: center;
+
+}
+#projects ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+#projects h5 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
+footer {
+  text-align: center;
+  padding-left: 2rem 1rem;
+  margin: auto;
+  color: #333;
+}
+
+footer h3 {
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+/*Screen Sizes 500px and UP*/
+
+@media(min-width: 500px) {
+
+  /*VERY IMPORTANT
+  To display div or element to 100%
+  of the view port device, a cool effect*/
+  #landing {
+    display: flex;
+    height: 100%;
+      }
+
+    #landing-text {
+      height: 100vh;
+    }
+
+    #landing-image {
+      height: 100vh;
+    }
+
+}
+/*Screen sizes 700 px and up*/
+
+@media(min-width:700px) {
+    .btn {
+      padding: 1rem 3rem;
+
+    }
+
+}
